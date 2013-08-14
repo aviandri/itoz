@@ -6,7 +6,6 @@ end
 
 
 post '/sendmail' do
-	p params
 	require 'pony'
  	Pony.mail({
 	:from => params["contact_email"],
@@ -18,10 +17,10 @@ post '/sendmail' do
      :address              => 'smtp.gmail.com',
      :port                 => '587',
      :enable_starttls_auto => true,
-     :user_name            => 'cs@jooliett.com',
-     :password             => 'jooliettasoy',
+     :user_name            => '',
+     :password             => '',
      :authentication       => :plain, 
-     :domain               => "jooliett.com" 
+     :domain               => "" 
      }
     })
 end
